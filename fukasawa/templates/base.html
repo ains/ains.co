@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Ainsley Escorce-Jones | ains.co</title>
+    <link href="//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/genericons.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/highlight.css">
+
+
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
+          title="{{ SITENAME }} Full Atom Feed"/>
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate"
+          title="{{ SITENAME }} Full RSS Feed"/>
+    {% endif %}
+    {% if FEED_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate"
+          title="{{ SITENAME }} Atom Feed"/>
+    {% endif %}
+    {% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate"
+          title="{{ SITENAME }} RSS Feed"/>
+    {% endif %}
+    {% if CATEGORY_FEED_ATOM and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml"
+          rel="alternate" title="{{ SITENAME }} Categories Atom Feed"/>
+    {% endif %}
+    {% if CATEGORY_FEED_RSS and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml"
+          rel="alternate" title="{{ SITENAME }} Categories RSS Feed"/>
+    {% endif %}
+    {% if TAG_FEED_ATOM and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate"
+          title="{{ SITENAME }} Tags Atom Feed"/>
+    {% endif %}
+    {% if TAG_FEED_RSS and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate"
+          title="{{ SITENAME }} Tags RSS Feed"/>
+    {% endif %}
+</head>
+
+<body class="single single-post postid-128 single-format-gallery">
+
+<div class="mobile-navigation" style="display: none;">
+
+    <ul class="mobile-menu">
+
+        <li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6">
+            <a href="{{ SITEURL }}">Home</a></li>
+        <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a
+                href="/blog">Blog</a></li>
+        <li id="menu-item-17"
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17"><a
+                href="https://github.com/ains/">Github</a>
+            <ul class="sub-menu">
+                <li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><a
+                        href="https://twitter.com/ainsej">Twitter</a></li>
+            </ul>
+        </li>
+
+    </ul>
+
+</div> <!-- /mobile-navigation -->
+
+<div class="sidebar">
+
+
+    <h1 class="blog-title">
+        <a href="{{ SITEURL }}" title="Ainsley Escorce-Jones | ains.co" rel="home">ains.co</a>
+    </h1>
+
+
+    <a class="nav-toggle hidden" title="Click to view the navigation"
+       href="http://www.andersnoren.se/themes/fukasawa/the-design-ethos-of-naoto-fukasawa/#">
+
+        <div class="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="clear"></div>
+        </div>
+
+        <p>
+            <span class="menu">Menu</span>
+            <span class="close">Close</span>
+        </p>
+
+    </a>
+
+    <ul class="main-menu">
+
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6"><a
+                href="{{ SITEURL }}">Home</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a
+                href="/blog">Blog</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17"><a
+                href="https://github.com/ains/">Github</a>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a
+                href="https://twitter.com/ainsej">Twitter</a></li>
+
+    </ul>
+
+    <div class="credits">
+
+    </div>
+
+    <div class="clear"></div>
+
+</div> <!-- /sidebar -->
+
+<div class="wrapper" id="wrapper">
+    <div class="content thin">
+
+
+        <div id="post-128"
+             class="single post-128 post type-post status-publish format-gallery hentry category-design category-interior-design tag-naoto-fukasawa post_format-post-format-gallery">
+
+
+            <div class="post-inner">
+
+                {% block content %}
+                {% endblock %}
+
+            </div> <!-- /post-inner -->
+
+        </div> <!-- /post -->
+
+
+    </div> <!-- /content -->
+
+</div> <!-- /wrapper -->
+</body>
+</html>

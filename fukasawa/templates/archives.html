@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="post-header">
+
+    <h1 class="post-title">Blog Posts</h1>
+
+</div> <!-- /post-header -->
+<div class="archive-container">
+
+    <ul class="posts-archive-list">
+        {% for article in dates %}
+        <li style="padding: 20px;">
+            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+            <span>{{ article.locale_date }}</span>
+
+            <p style="margin: 15px 0 15px 0;">{{ article.summary }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}

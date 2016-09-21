@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock title %}
+{% block content %}
+<article class="single">
+    <div class="inside">
+
+    <abbr class="published" title="{{ article.date.isoformat() }}">
+      <em>{{ article.locale_date }}</em>
+    </abbr>
+
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.content }}</p>
+
+
+        <ul class="actions">
+            <li>
+                <a class="big black button left" href="https://twitter.com/intent/tweet?screen_name=ainsej&text=Re:{{ SITEURL }}/{{ article.url }}" data-dnt="true">Comment on Twitter</a>
+                <a class="big charcoal button center" href="https://twitter.com/intent/tweet?text=&quot;{{ article.title }}&quot;%20{{ SITEURL }}/{{ article.url }}%20via%20&#64;ainsej" data-dnt="true">Share on Twitter</a>
+                <a class="big gray button right" href="{{ SITEURL }}">More Articles</a>
+            </li>
+        </ul>
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+</article>
+
+<script type="text/javascript">
+mixpanel.track("{{ article.title }} read");
+</script>
+{% endblock content %}

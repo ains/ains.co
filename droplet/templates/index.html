@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<article id="intro">
+    <div class="inside">
+        <h1>I'm Ainsley</h1>
+        <p>A Software Engineer, Web Developer and Computer Science Student at Imperial College London. Here you'll find my general musings and the details on what I've been working on recently.</p>
+
+        <ul class="actions">
+            <li>
+                <a class="big charcoal left button" href="mailto:me@ains.co?subject=Hello">me@ains.co</a>
+                <a class="big gray button right" href="http://twitter.com/ainsej">&#64;ainsej</a>
+            </li>
+        </ul>
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+</article>
+
+    {% for article in articles_page.object_list %}        
+    <article>
+    <div class="inside">
+        <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+
+        <p>{{ article.summary }}</p>
+
+        <ul class="actions">
+            <li>
+                <a class="big gray button" href="{{ SITEURL }}/{{ article.url }}">Continue Reading</a>
+            </li>
+        </ul>
+    </div>
+</article>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock title %}
+{% block content %}
+
+<div class="post-header">
+
+    <h1 class="post-title">{{ article.title }}</h1>
+
+</div> <!-- /post-header -->
+
+<div class="post-content">
+
+    {{ article.content }}
+
+</div> <!-- /post-content -->
+
+<div class="clear"></div>
+
+<div class="post-meta-bottom">
+
+
+    <ul>
+        <li class="post-date">{{ article.locale_date }}</li>
+    </ul>
+
+    <div class="clear"></div>
+
+</div> <!-- /post-meta-bottom -->
+{% endblock content %}
