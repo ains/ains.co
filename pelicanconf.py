@@ -25,3 +25,6 @@ RELATIVE_URLS = True
 ARCHIVES_SAVE_AS = 'blog/index.html'
 ARTICLE_URL = 'blog/{slug}.html'
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
+
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['assets']

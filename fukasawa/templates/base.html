@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-    <link href="//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/css/genericons.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/highlight.css">
+    {% assets filters="cssmin", output="css/style.min.css", "css/fonts.css", "css/style.css", "css/highlight.css"%}
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
 
 
     {% if FEED_ALL_ATOM %}
@@ -77,7 +76,7 @@
 
 
     <a class="nav-toggle hidden" title="Click to view the navigation"
-       href="http://www.andersnoren.se/themes/fukasawa/the-design-ethos-of-naoto-fukasawa/#">
+       href="#">
 
         <div class="bars">
             <div class="bar"></div>
