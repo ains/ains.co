@@ -1,3 +1,5 @@
 webassets
 pelican==3.5.0
 cssmin
+markdown
+awscli
