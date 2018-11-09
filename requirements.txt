@@ -1,5 +1,5 @@
-webassets
+webassets==0.12.1
 pelican==3.5.0
-cssmin
-markdown
-awscli
+cssmin==0.2.0
+Markdown==2.6.11
+awscli==1.16.51
